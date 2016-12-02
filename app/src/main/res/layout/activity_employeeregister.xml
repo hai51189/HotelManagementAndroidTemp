@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hotelmanagement.hotelmanagementproject.employeeregister"
+    android:background="@color/accent_material_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel Management Group 18"
+        android:editable="false"
+        android:textSize="27dp"
+        android:id="@+id/textView10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Code:"
+        android:id="@+id/textView11"
+        android:layout_marginTop="40dp"
+        android:textSize="22dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FirstName:"
+        android:id="@+id/textView12"
+        android:layout_marginTop="30dp"
+        android:textSize="22dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LastName:"
+        android:id="@+id/textView13"
+        android:textSize="22dp"
+        android:layout_below="@+id/textView12"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:id="@+id/textView14"
+        android:textSize="22dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:id="@+id/textView15"
+        android:textSize="22dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView14"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RePassword:"
+        android:id="@+id/textView16"
+        android:textSize="22dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/code"
+        android:layout_above="@+id/textView12"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/employeefirstname"
+        android:layout_above="@+id/textView13"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/employeelastname"
+        android:layout_above="@+id/textView14"
+        android:layout_alignLeft="@+id/employeefirstname"
+        android:layout_alignStart="@+id/employeefirstname" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/employeeemail"
+        android:layout_above="@+id/textView15"
+        android:layout_alignLeft="@+id/employeelastname"
+        android:layout_alignStart="@+id/employeelastname" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/employeepassword"
+        android:layout_above="@+id/textView16"
+        android:layout_alignLeft="@+id/employeeemail"
+        android:layout_alignStart="@+id/employeeemail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/employeerepassword"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignLeft="@+id/employeepassword"
+        android:layout_alignStart="@+id/employeepassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/employeeRegisterbut"
+        android:layout_below="@+id/textView16"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".guesthomepage"
+    android:background="@color/accent_material_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel Management Group 18"
+        android:editable="false"
+        android:textSize="27dp"
+        android:id="@+id/textView17"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="CancelReservation"
+        android:text="Cancel Reservation"
+        android:id="@+id/GuestCancelReservationButton"
+        android:layout_alignTop="@+id/GuestReservationButton"
+        android:layout_alignRight="@+id/textView17"
+        android:layout_alignEnd="@+id/textView17" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RoomListView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView17"
+        android:layout_marginTop="40dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:layout_above="@+id/DateCheckInButton"
+        android:layout_marginBottom="48dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/DateCheckInDisplay"
+        android:layout_alignBottom="@+id/DateCheckInButton"
+        android:layout_alignRight="@+id/RoomListView"
+        android:layout_alignEnd="@+id/RoomListView"
+        android:layout_alignTop="@+id/DateCheckInButton"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/DateCheckInButton"
+        android:layout_toEndOf="@+id/DateCheckInButton"
+        android:hint="Date CheckIn"
+        android:layout_marginLeft="10dp"
+        android:textSize="18dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:autoText="false"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room List:"
+        android:id="@+id/textView22"
+        android:layout_below="@+id/textView17"
+        android:layout_alignLeft="@+id/textView17"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateCheckOut"
+        android:id="@+id/DateCheckOutButton"
+        android:layout_below="@+id/DateCheckInButton"
+        android:layout_alignLeft="@+id/DateCheckInButton"
+        android:layout_alignStart="@+id/DateCheckInButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/DateCheckOutDisplay"
+        android:hint="Date CheckIn"
+        android:textSize="18dp"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:autoText="false"
+        android:textAlignment="center"
+        android:layout_alignBottom="@+id/DateCheckOutButton"
+        android:layout_alignRight="@+id/textView17"
+        android:layout_alignEnd="@+id/textView17"
+        android:layout_alignTop="@+id/DateCheckOutButton"
+        android:layout_toRightOf="@+id/DateCheckOutButton"
+        android:layout_toEndOf="@+id/DateCheckOutButton"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateCheckIn"
+        android:id="@+id/DateCheckInButton"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView22"
+        android:layout_alignStart="@+id/textView22" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Res &amp; Entertainment"
+        android:id="@+id/REbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/GuestCancelReservationButton"
+        android:layout_alignStart="@+id/GuestCancelReservationButton" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RoomResult"
+        android:background="@color/dim_foreground_disabled_material_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/REbutton"
+        android:layout_toStartOf="@+id/REbutton"
+        android:layout_alignTop="@+id/REbutton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Reservation"
+        android:onClick="MakeReservation"
+        android:id="@+id/GuestReservationButton"
+        android:layout_above="@+id/RoomResult"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter the room to book"
+        android:ems="10"
+        android:layout_above="@+id/GuestCancelReservationButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/txtinput"
+        android:layout_toStartOf="@+id/GuestCancelReservationButton"
+        android:layout_alignRight="@+id/GuestCancelReservationButton"
+        android:layout_alignEnd="@+id/GuestCancelReservationButton"
+        android:layout_marginRight="110dp"
+        android:layout_marginEnd="110dp"
+        android:layout_toLeftOf="@+id/GuestCancelReservationButton" />
+
+</RelativeLayout>
